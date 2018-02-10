@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'FrontPageController@show');
+Route::get('/admin/deals','Admin\DealController@index');
+Route::get('/admin/deals/deal-new','Admin\DealController@dealNew');
+Route::get('/admin/stores','Admin\StoreController@show');
+
